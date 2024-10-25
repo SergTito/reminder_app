@@ -1,0 +1,73 @@
+spring.application.name: reminder_app
+spring:
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/reminderApp
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+#    hikari:
+#      connection-timeout: 30000
+#      maximum-pool-size: 10
+#      idle-timeout: 600000
+
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: true
+
+  liquibase:
+    change-log: classpath:db/changelog/master.yaml
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 838019715728-pleenar7a1s43p5n6g90pj06m1k4ur6s.apps.googleusercontent.com
+            clientSecret: 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
+            redirectUri: http://localhost:8080/login/oauth2/code/google
+            scope:
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://openidconnect.googleapis.com/v1/userinfo
+
+
+
+  swagger-ui:
+    oauth:
+      client-id: 838019715728-pleenar7a1s43p5n6g90pj06m1k4ur6s.apps.googleusercontent.com
+      client-secret: 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
+      scopes:
+    oauth2-redirect-url: http://localhost:8080/swagger-ui/oauth2-redirect
+
+
+
+
+server:
+  port: 8080
+
+quartz:
+  auto-startup: true
+  wait-on-nr-daemon: false
+logging:
+  level:
+    root: INFO
+    com.example.reminder_02: DEBUG
+    org.springframework.boot.autoconfigure.security: DEBUG
+    org.springframework.security: DEBUG
+    com:
+      example:
+        reminder_02:
+          configOauth2:
+            CustomOAuth2UserService: DEBUG
+
+bot_name: reminderSergTito_bot
+bot_token: 7929127131:AAE6fNe4fxvX3fPtcNamRWYxg7mXTv8sMwU
+
+email_username: sergeytitanyan@gmail.com
+email_password: cgio fjjw ccvc jrhc
