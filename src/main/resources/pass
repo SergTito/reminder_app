@@ -1,0 +1,1 @@
+urlDB=jdbc:postgresql://localhost:5432/reminder_app

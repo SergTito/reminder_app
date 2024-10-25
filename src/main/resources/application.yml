@@ -26,8 +26,8 @@ spring:
       client:
         registration:
           google:
-            clientId: 838019715728-pleenar7a1s43p5n6g90pj06m1k4ur6s.apps.googleusercontent.com
-            clientSecret: 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
+            clientId: ""
+            clientSecret: ""
             redirectUri: http://localhost:8080/login/oauth2/code/google
             scope:
         provider:
@@ -40,8 +40,8 @@ spring:
 
   swagger-ui:
     oauth:
-      client-id: 838019715728-pleenar7a1s43p5n6g90pj06m1k4ur6s.apps.googleusercontent.com
-      client-secret: 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
+      client-id: ""
+      client-secret: ""
       scopes:
     oauth2-redirect-url: http://localhost:8080/swagger-ui/oauth2-redirect
 
@@ -66,8 +66,8 @@ logging:
           configOauth2:
             CustomOAuth2UserService: DEBUG
 
-bot_name: reminderSergTito_bot
-bot_token: 7929127131:AAE6fNe4fxvX3fPtcNamRWYxg7mXTv8sMwU
+bot_name: ""
+bot_token: ""
 
-email_username: sergeytitanyan@gmail.com
-email_password: cgio fjjw ccvc jrhc
+email_username: ""
+email_password: ""
